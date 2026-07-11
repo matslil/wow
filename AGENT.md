@@ -28,4 +28,23 @@ When creating a new sub-directory, check if there is an existing sub-directory w
 
 When creating or updating any process documents in this repository, always check if the proposed change would make sense to apply for similar sub-directories as well and if so, implement those changes as well. Also validate that the resulting process still make sense, since this will be a mix of several proposed ways of working from different sources.
 
-All changes to this repository should be done as one or more PR:s, where the last PR must be mergeable to main branch.
+Pull request requirement
+------------------------
+
+Native agents must finish repository updates through one or more pull requests.
+This is a completion requirement, not an optional follow-up.
+
+Before reporting a repository update as done, a native agent must ensure that:
+
+1. The intended changes are committed on a branch that is not `main`
+2. The branch has been pushed to the repository remote
+3. A pull request has been opened for the branch
+4. If several PR:s are needed, their order is documented and the final PR is
+   mergeable to `main`
+5. The final response includes the PR URL or explicitly states the blocker that
+   prevented creating the PR
+
+If a native agent cannot create the branch, commit, push, or PR because of
+missing permissions, missing remote configuration, failed checks, or unavailable
+tools, it must stop and report that blocker instead of calling the repository
+update complete.
