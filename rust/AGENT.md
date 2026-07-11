@@ -103,6 +103,39 @@ Agents should prefer idiomatic Rust and the repository's existing style.
 - Public crates should include crate-level docs, examples, and documented
   error, panic, and safety behavior.
 
+## AI-Assisted Development Guardrails
+
+Treat AI-generated code, tests, documentation, and review comments as proposals
+that require normal engineering verification. Agents may accelerate discovery,
+implementation, and refactoring, but they do not replace the project owner,
+maintainer, or reviewer.
+
+When using AI agents in a Rust repository:
+
+- keep the user need, requirement identifier, or issue link visible in the task
+  context so generated changes can be traced back to intent;
+- prefer small, reviewable changes with a clear explanation of agent
+  assumptions, commands run, files changed, and remaining uncertainty;
+- inspect generated code for plausible but wrong APIs, outdated crate behavior,
+  missing feature gates, weak error handling, and tests that merely assert the
+  implementation rather than the requirement;
+- never accept AI output that introduces secrets, hidden network calls,
+  telemetry, dependency changes, build-script side effects, or broad filesystem
+  access without explicit review;
+- verify security-sensitive changes with independent checks such as human code
+  review, threat review, dependency audit, fuzzing, property tests, or targeted
+  negative tests as appropriate;
+- keep prompts, retrieved context, and generated summaries free of credentials,
+  private keys, tokens, proprietary customer data, and other material that is
+  not approved for the agent runtime;
+- document when a change was substantially AI-assisted if the repository,
+  organization, or release process requires provenance for audit or review.
+
+Use agent delegation deliberately. A specialist agent may inspect tests,
+security, documentation, unsafe code, or FFI boundaries, but the final report
+must reconcile conflicting findings and cite repeatable evidence rather than
+presenting agent consensus as proof.
+
 ## Verification
 
 The default verification set for a Rust repository is:
@@ -156,11 +189,15 @@ Before approving a Rust change, verify:
 
 - the change maps to a requirement, issue, or explicit user need;
 - new or changed behavior has tests or a justified verification alternative;
+- AI-generated or AI-modified code has been read by a responsible reviewer and
+  is not accepted solely because another agent approved it;
 - the public API remains idiomatic and compatible, or the breaking change is
   intentional and documented;
 - feature flags, optional dependencies, and platform gates are tested;
 - unsafe code and FFI boundaries have explicit invariants;
 - errors are actionable and do not discard useful context;
+- new or changed dependencies, build scripts, generated code, and CI permissions
+  do not create unreviewed supply-chain or execution risk;
 - documentation, examples, and changelog entries are updated when users need
   to know about the change;
 - CI covers the affected workspace members and targets.
@@ -205,7 +242,9 @@ When validating a foreign Rust repository:
 5. Check feature flags, external requirements, generated code, and unsafe/FFI
    boundaries.
 6. Compare public API and documentation against Rust API Guidelines.
-7. Report gaps as process findings with concrete files, commands, and missing
+7. Check whether AI-assisted development is governed by clear review, evidence,
+   data-handling, secret-handling, and tool-permission expectations.
+8. Report gaps as process findings with concrete files, commands, and missing
    evidence.
 
 If setting up a new Rust repository, create the smallest useful version of this
@@ -221,3 +260,9 @@ obligations become real.
 - Cargo clippy: https://doc.rust-lang.org/cargo/commands/cargo-clippy.html
 - Cargo fmt: https://doc.rust-lang.org/cargo/commands/cargo-fmt.html
 - mpi-rs repository: https://github.com/rsmpi/rsmpi
+- GitHub Copilot responsible use:
+  https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features
+- OWASP Top 10 for LLM Applications:
+  https://owasp.org/www-project-top-10-for-large-language-model-applications/
+- NIST AI Risk Management Framework:
+  https://www.nist.gov/itl/ai-risk-management-framework
