@@ -103,38 +103,34 @@ Agents should prefer idiomatic Rust and the repository's existing style.
 - Public crates should include crate-level docs, examples, and documented
   error, panic, and safety behavior.
 
-## AI-Assisted Development Guardrails
+## Agent Operating Guardrails
 
-Treat AI-generated code, tests, documentation, and review comments as proposals
-that require normal engineering verification. Agents may accelerate discovery,
-implementation, and refactoring, but they do not replace the project owner,
-maintainer, or reviewer.
+When setting up or validating a Rust repository, the agent must create or check
+evidence that AI-assisted work remains traceable, reviewable, and bounded.
 
-When using AI agents in a Rust repository:
-
-- keep the user need, requirement identifier, or issue link visible in the task
-  context so generated changes can be traced back to intent;
-- prefer small, reviewable changes with a clear explanation of agent
-  assumptions, commands run, files changed, and remaining uncertainty;
-- inspect generated code for plausible but wrong APIs, outdated crate behavior,
-  missing feature gates, weak error handling, and tests that merely assert the
-  implementation rather than the requirement;
-- never accept AI output that introduces secrets, hidden network calls,
+- Preserve the user need, requirement identifier, or issue link in the task
+  notes, commit message, pull request, or process finding.
+- Keep changes small enough to review. When reporting results, state the
+  assumptions made, commands run, files changed, and remaining uncertainty.
+- Re-read generated code and tests before reporting completion. Look for
+  plausible but wrong APIs, outdated crate behavior, missing feature gates,
+  weak error handling, and tests that only mirror the implementation.
+- Flag any generated change that introduces secrets, hidden network calls,
   telemetry, dependency changes, build-script side effects, or broad filesystem
-  access without explicit review;
-- verify security-sensitive changes with independent checks such as human code
-  review, threat review, dependency audit, fuzzing, property tests, or targeted
-  negative tests as appropriate;
-- keep prompts, retrieved context, and generated summaries free of credentials,
-  private keys, tokens, proprietary customer data, and other material that is
-  not approved for the agent runtime;
-- document when a change was substantially AI-assisted if the repository,
-  organization, or release process requires provenance for audit or review.
+  access. Do not present that change as ready without explicit evidence of
+  review and approval.
+- For security-sensitive changes, add or request independent evidence such as
+  threat review, dependency audit, fuzzing, property tests, targeted negative
+  tests, or human review.
+- Do not include credentials, private keys, tokens, proprietary customer data,
+  or other unapproved sensitive material in prompts, retrieved context, logs,
+  generated summaries, or process artifacts.
+- If the repository requires AI provenance, update the required artifact with
+  the fact that the change was substantially AI-assisted.
 
-Use agent delegation deliberately. A specialist agent may inspect tests,
-security, documentation, unsafe code, or FFI boundaries, but the final report
-must reconcile conflicting findings and cite repeatable evidence rather than
-presenting agent consensus as proof.
+When using specialist agents for tests, security, documentation, unsafe code,
+or FFI boundaries, reconcile conflicting findings in the final report and cite
+repeatable evidence. Do not treat agreement between agents as verification.
 
 ## Verification
 
@@ -189,8 +185,8 @@ Before approving a Rust change, verify:
 
 - the change maps to a requirement, issue, or explicit user need;
 - new or changed behavior has tests or a justified verification alternative;
-- AI-generated or AI-modified code has been read by a responsible reviewer and
-  is not accepted solely because another agent approved it;
+- AI-generated or AI-modified code has evidence of responsible review and is
+  not accepted solely because another agent approved it;
 - the public API remains idiomatic and compatible, or the breaking change is
   intentional and documented;
 - feature flags, optional dependencies, and platform gates are tested;
