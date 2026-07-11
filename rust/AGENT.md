@@ -103,6 +103,35 @@ Agents should prefer idiomatic Rust and the repository's existing style.
 - Public crates should include crate-level docs, examples, and documented
   error, panic, and safety behavior.
 
+## Agent Operating Guardrails
+
+When setting up or validating a Rust repository, the agent must create or check
+evidence that AI-assisted work remains traceable, reviewable, and bounded.
+
+- Preserve the user need, requirement identifier, or issue link in the task
+  notes, commit message, pull request, or process finding.
+- Keep changes small enough to review. When reporting results, state the
+  assumptions made, commands run, files changed, and remaining uncertainty.
+- Re-read generated code and tests before reporting completion. Look for
+  plausible but wrong APIs, outdated crate behavior, missing feature gates,
+  weak error handling, and tests that only mirror the implementation.
+- Flag any generated change that introduces secrets, hidden network calls,
+  telemetry, dependency changes, build-script side effects, or broad filesystem
+  access. Do not present that change as ready without explicit evidence of
+  review and approval.
+- For security-sensitive changes, add or request independent evidence such as
+  threat review, dependency audit, fuzzing, property tests, targeted negative
+  tests, or human review.
+- Do not include credentials, private keys, tokens, proprietary customer data,
+  or other unapproved sensitive material in prompts, retrieved context, logs,
+  generated summaries, or process artifacts.
+- If the repository requires AI provenance, update the required artifact with
+  the fact that the change was substantially AI-assisted.
+
+When using specialist agents for tests, security, documentation, unsafe code,
+or FFI boundaries, reconcile conflicting findings in the final report and cite
+repeatable evidence. Do not treat agreement between agents as verification.
+
 ## Verification
 
 The default verification set for a Rust repository is:
@@ -156,11 +185,15 @@ Before approving a Rust change, verify:
 
 - the change maps to a requirement, issue, or explicit user need;
 - new or changed behavior has tests or a justified verification alternative;
+- AI-generated or AI-modified code has evidence of responsible review and is
+  not accepted solely because another agent approved it;
 - the public API remains idiomatic and compatible, or the breaking change is
   intentional and documented;
 - feature flags, optional dependencies, and platform gates are tested;
 - unsafe code and FFI boundaries have explicit invariants;
 - errors are actionable and do not discard useful context;
+- new or changed dependencies, build scripts, generated code, and CI permissions
+  do not create unreviewed supply-chain or execution risk;
 - documentation, examples, and changelog entries are updated when users need
   to know about the change;
 - CI covers the affected workspace members and targets.
@@ -205,7 +238,9 @@ When validating a foreign Rust repository:
 5. Check feature flags, external requirements, generated code, and unsafe/FFI
    boundaries.
 6. Compare public API and documentation against Rust API Guidelines.
-7. Report gaps as process findings with concrete files, commands, and missing
+7. Check whether AI-assisted development is governed by clear review, evidence,
+   data-handling, secret-handling, and tool-permission expectations.
+8. Report gaps as process findings with concrete files, commands, and missing
    evidence.
 
 If setting up a new Rust repository, create the smallest useful version of this
@@ -221,3 +256,9 @@ obligations become real.
 - Cargo clippy: https://doc.rust-lang.org/cargo/commands/cargo-clippy.html
 - Cargo fmt: https://doc.rust-lang.org/cargo/commands/cargo-fmt.html
 - mpi-rs repository: https://github.com/rsmpi/rsmpi
+- GitHub Copilot responsible use:
+  https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features
+- OWASP Top 10 for LLM Applications:
+  https://owasp.org/www-project-top-10-for-large-language-model-applications/
+- NIST AI Risk Management Framework:
+  https://www.nist.gov/itl/ai-risk-management-framework
