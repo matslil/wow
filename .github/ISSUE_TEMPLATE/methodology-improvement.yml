@@ -1,0 +1,59 @@
+name: Methodology improvement
+description: Propose an evidence-backed improvement to the Way of Working
+title: "Methodology: "
+body:
+  - type: dropdown
+    id: classification
+    attributes:
+      label: Affected layer
+      options:
+        - Core
+        - Starter
+        - Project definition
+        - Stage
+        - Skill
+        - Template
+        - Profile
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Observed problem and evidence
+      description: Identify project context, methodology version, and repeatable evidence.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Supply concise normative wording or an exact artifact change.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Generalizable contexts
+      description: Explain where the proposal applies and where it does not.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Tradeoffs, compatibility, migration, and risks
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: State validation performed or proposed.
+    validations:
+      required: true
+  - type: checkboxes
+    id: authority
+    attributes:
+      label: Project authority
+      options:
+        - label: The project's designated human approved submitting this proposal.
+          required: true

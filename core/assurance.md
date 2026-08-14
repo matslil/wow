@@ -35,6 +35,35 @@ able to be validated, and correct. Assess both each statement and the set; good
 individual statements can still omit behavior, conflict, or express the wrong
 system.
 
+## EARS syntax
+
+Express every textual requirement using the Easy Approach to Requirements Syntax
+(EARS). Select the pattern that matches the semantics:
+
+```text
+Ubiquitous:       The <system> shall <response>.
+Event-driven:     When <trigger>, the <system> shall <response>.
+State-driven:     While <state>, the <system> shall <response>.
+Optional feature: Where <feature is included>, the <system> shall <response>.
+Unwanted behavior: If <unwanted condition>, then the <system> shall <response>.
+Complex:          While <state>, when <trigger>, the <system> shall <response>.
+```
+
+Combine patterns only when their conditions jointly govern one response. Keep
+clauses in temporal order: optional feature or precondition, state, trigger,
+system, response. Use `shall` for the obligation. Name the system element at the
+correct abstraction level, and define triggers, states, features, responses,
+units, and bounds precisely.
+
+EARS constrains a requirement statement; it does not replace its identifier,
+source, rationale, attributes, traceability, verification case, or the quality
+assessment above. If an EARS response contains more than one obligation, split
+it to preserve singularity. Do not force needs, rationale, design decisions,
+tasks, or verification procedures into requirement syntax merely because they
+are stored near requirements.
+
+EARS pattern reference: [Easy Approach to Requirements Syntax](https://alistairmavin.com/ears/).
+
 ## Verification and validation coverage
 
 Trace each requirement to one or more verification cases with an appropriate
