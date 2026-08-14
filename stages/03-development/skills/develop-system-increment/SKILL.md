@@ -11,7 +11,8 @@ profiles.
 1. Select one authorized engineering outcome and its traced needs, requirements,
    risks, and decisions.
 2. Assess affected requirements individually and as a set using
-   `core/assurance.md`; define appropriate verification and validation evidence.
+   `core/assurance.md`; express each textual requirement using the applicable
+   EARS pattern and define appropriate verification and validation evidence.
 3. Zig-zag between needs, requirements, architecture, behavior, interfaces,
    analysis, realization, integration, verification, and validation. Propagate a
    later insight back to the earliest affected item, then update and re-check its

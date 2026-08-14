@@ -28,7 +28,8 @@ ask the designated human and continue independent work.
 
 Assess every requirement and the complete set using
 [`../../core/assurance.md`](../../core/assurance.md). Match requirements to
-verification cases and validate them against needs and representative use.
+verification cases, express textual requirements using EARS, and validate them
+against needs and representative use.
 
 The tollgate assesses model completeness, traceability, implementation,
 integration, verification, validation, unresolved defects, operational

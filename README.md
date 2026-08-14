@@ -40,6 +40,8 @@ decides whether to change stage.
   incrementally.
 - All persistent changes: use the fixed pull-request workflow in
   [`core/change-workflow.md`](core/change-workflow.md).
+- Process learning: use [`workflows/methodology-retrospective.md`](workflows/methodology-retrospective.md)
+  to improve the project locally and propose evidence-backed changes upstream.
 
 Keep agent output crisp, structured, and condensed. Lead with decisions,
 blockers, and outcomes; link to detailed evidence instead of repeating it.

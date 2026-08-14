@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run Methodology Retrospective"
+  short_description: "Review project evidence and improve the method"
+  default_prompt: "Use $run-methodology-retrospective to assess process evidence and prepare an upstream improvement proposal."
