@@ -1,0 +1,14 @@
+tollgate: required
+scope: required
+current_stage: required
+candidate_stage: required
+baseline: required
+maturity:
+  criterion: absent
+blocking_findings: []
+important_findings: []
+uncertainties: []
+recommendation: required
+rationale: required
+human_decision_required: required
+independent_work_continuing: []

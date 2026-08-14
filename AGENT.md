@@ -1,50 +1,38 @@
-Each sub-directory handles one kind of project as follows:
+# Agent Instructions
 
-rust
-    Handles projects using Rust programming language
+This repository is authoritative for its methodology. Do not derive normative
+rules from external projects. Keep technology-specific guidance separate from
+the core.
 
-Agents using this repository for validating some other project are hereby called foreign agents.
+## Load only applicable context
 
-Agents whose purpose is to update this repository are called native agents.
+1. Read `core/README.md` and the core documents it requires.
+2. In an adopting project, read its project-definition manifest and tailoring record.
+3. Identify the current lifecycle stage, role, and scope.
+4. Read only that stage's `README.md`, tollgate, and applicable skill.
+5. Read selected starter items and profiles only when applicable.
 
-Instructions for foreign agents
--------------------------------
+Precedence is: core, completed project definition, approved tailoring, selected
+starter content, selected profiles, stage/role skill, task-specific direction.
+A lower layer cannot weaken a higher one.
 
-Determine which sub-directory that matches most closely to the type of project to be validated or setup. Only use one sub-directory.
+## Operate continuously
 
-The information in the directory can be used in either of two ways:
+Deliver every persistent repository change through a pull request. Continue
+with useful authorized work, including the next PR, unless a material question
+requires a human answer and no independent work remains. A pending review,
+failure, missing documentation, or difficult task is not by itself a reason to
+pause.
 
-1. For setting up the project, creating the files describing how the development should work
-2. Validating an existing project to make sure the process related files still follow the way of working
+Agents recommend tollgate outcomes. Only the human authority named by the
+project may approve a stage transition, risk acceptance, release, or retirement.
 
-Instructions for native agents
-------------------------------
+## Communicate concisely
 
-This repository should contain knowledge found on Internet, and any related best practice that makes sense to use.
+Lead with the outcome or question. Then include only decisive evidence, required
+human action, and the next step. Separate blockers from advice. Do not restate
+the request, narrate routine tool use, reproduce long logs, or bury decisions in
+background text. Put detail in repository artifacts and link to it.
 
-For engineering project, a simplified and adapted version of INCOSE should be used as the base foundation.
-
-When creating a new sub-directory, check if there is an existing sub-directory which is similar in nature. For example, if creating a sub-directory for programming in some language, check if there is a directory for programming in some other language. If so, try to make the content of the new directory similar to the existing sub-directory but adapted for the new programming language.
-
-When creating or updating any process documents in this repository, always check if the proposed change would make sense to apply for similar sub-directories as well and if so, implement those changes as well. Also validate that the resulting process still make sense, since this will be a mix of several proposed ways of working from different sources.
-
-Pull request requirement
-------------------------
-
-Native agents must finish repository updates through one or more pull requests.
-This is a completion requirement, not an optional follow-up.
-
-Before reporting a repository update as done, a native agent must ensure that:
-
-1. The intended changes are committed on a branch that is not `main`
-2. The branch has been pushed to the repository remote
-3. A pull request has been opened for the branch
-4. If several PR:s are needed, their order is documented and the final PR is
-   mergeable to `main`
-5. The final response includes the PR URL or explicitly states the blocker that
-   prevented creating the PR
-
-If a native agent cannot create the branch, commit, push, or PR because of
-missing permissions, missing remote configuration, failed checks, or unavailable
-tools, it must stop and report that blocker instead of calling the repository
-update complete.
+Native agents updating this repository must finish through a non-default branch,
+verified commits, a push, and a pull request. Report the PR URL or the blocker.

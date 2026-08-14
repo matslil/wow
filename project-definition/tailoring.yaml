@@ -1,0 +1,8 @@
+starter_dispositions:
+  - starter_item: required
+    disposition: accepted
+    rationale: required-when-not-accepted
+    risk: required-when-not-accepted
+    compensating_evidence: []
+    reassessment_trigger: optional
+    approved_by: required-when-approval-is-needed
