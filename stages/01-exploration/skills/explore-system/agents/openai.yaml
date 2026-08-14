@@ -1,0 +1,4 @@
+interface:
+  display_name: "Explore System"
+  short_description: "Explore a software system opportunity"
+  default_prompt: "Use $explore-system to assess the problem, context, uncertainty, and exploration maturity."

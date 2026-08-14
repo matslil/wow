@@ -1,0 +1,4 @@
+interface:
+  display_name: "Transition System Release"
+  short_description: "Prepare and transition a system release"
+  default_prompt: "Use $transition-system-release to prepare a release and assess transition readiness."

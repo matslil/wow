@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evaluate System Use"
+  short_description: "Evaluate operational use and outcomes"
+  default_prompt: "Use $evaluate-system-use to assess system operation, outcomes, and utilization maturity."
