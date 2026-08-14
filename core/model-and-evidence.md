@@ -22,6 +22,10 @@ operational observation -> change need
 retired element -> archive, reuse, recycle, or disposal disposition
 ```
 
+Trace verification cases to their method, conditions, success criteria, result,
+and evidence. Trace validation to the upstream need and intended-use scenario.
+Absence of a trace is a gap; a trace without adequate evidence is not closure.
+
 Classify knowledge as `explicit`, `evidenced`, `inferred`, `unknown`, or
 `conflicting`. An inference is never silently promoted to an approved need,
 requirement, or decision. Generated views must not compete with the authoritative

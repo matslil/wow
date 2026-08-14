@@ -12,6 +12,19 @@
 
 ## Evidence
 
+### Verification and validation coverage
+
+- Requirement verification methods and cases:
+- Other artifact and implementation assurance:
+- Validation against needs and intended use:
+
+### Holistic consistency review
+
+- Affected engineering chain:
+- Reviewed and consistent:
+- Not applicable:
+- Unresolved:
+
 ## Unresolved
 
 ## Decisions requiring human authority
