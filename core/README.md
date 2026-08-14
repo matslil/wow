@@ -20,5 +20,6 @@ These rules define methodology conformance and cannot be tailored:
 
 Read [`lifecycle.md`](lifecycle.md), [`change-workflow.md`](change-workflow.md),
 [`authority-and-tollgates.md`](authority-and-tollgates.md),
-[`model-and-evidence.md`](model-and-evidence.md), and
+[`model-and-evidence.md`](model-and-evidence.md),
+[`assurance.md`](assurance.md), and
 [`agent-communication.md`](agent-communication.md).
