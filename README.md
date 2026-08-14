@@ -1,6 +1,45 @@
-Way of Working
-==============
+# Way of Working
 
-This repository contains descriptions of processes when developing in other repositories. Each sub-directory covers one kind of development, e.g. "rust" directory cover how the development process should look like for projects using Rust programming language.
+This repository is the authoritative methodology for model-based development of
+software-intensive systems by people and AI agents. It adapts a systems
+engineering lifecycle to software without making a programming language or an
+external project authoritative.
 
-The focus is to support AI agentic development. It should use this repository for knowing the actual process to use, what kind of agents should run and what they should look at. For Rust projects this translates into using this repository as instructions for validating the system engineering documentation for the target project.
+## Methodology layers
+
+| Layer | Meaning |
+| --- | --- |
+| [`core/`](core/README.md) | Mandatory rules. Projects must not override them. |
+| [`starter/`](starter/README.md) | Defaults that accelerate setup. Exploration and Concept may be tailored with recorded rationale. |
+| [`project-definition/`](project-definition/README.md) | Decisions every adopting project must supply. They must not be inferred as approved facts. |
+
+Stage-local instructions and skills live in [`stages/`](stages/README.md).
+Language and product profiles may add realization rules, but cannot redefine the
+core, stage authority, or lifecycle.
+
+## Lifecycle
+
+1. Exploration
+2. Concept
+3. Development
+4. Production and Transition
+5. Utilization
+6. Support and Evolution
+7. Retirement
+
+Stages may overlap, iterate, or apply to different versions and system elements.
+An agent assesses tollgate maturity; only the project-defined human authority
+decides whether to change stage.
+
+## Using the methodology
+
+- New project: complete the project definition, select starter content, then
+  begin in the applicable stage.
+- Existing project: use [`workflows/adopt-existing-project.md`](workflows/adopt-existing-project.md)
+  to inventory evidence, reconstruct the system, and introduce missing artifacts
+  incrementally.
+- All persistent changes: use the fixed pull-request workflow in
+  [`core/change-workflow.md`](core/change-workflow.md).
+
+Keep agent output crisp, structured, and condensed. Lead with decisions,
+blockers, and outcomes; link to detailed evidence instead of repeating it.

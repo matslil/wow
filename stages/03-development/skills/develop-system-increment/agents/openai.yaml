@@ -1,0 +1,4 @@
+interface:
+  display_name: "Develop System Increment"
+  short_description: "Develop a verified system increment"
+  default_prompt: "Use $develop-system-increment to deliver a traced and verified development increment through a PR."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Select System Concept"
+  short_description: "Compare and recommend system concepts"
+  default_prompt: "Use $select-system-concept to compare viable concepts and assess readiness for Development."

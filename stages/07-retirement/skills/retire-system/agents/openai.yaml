@@ -1,0 +1,4 @@
+interface:
+  display_name: "Retire System"
+  short_description: "Retire and preserve a software system"
+  default_prompt: "Use $retire-system to withdraw, archive, and classify a system for future reuse."

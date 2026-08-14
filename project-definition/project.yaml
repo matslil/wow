@@ -1,0 +1,28 @@
+methodology_version: required
+project:
+  name: required
+  owner: required
+  system_of_interest: required
+  purpose: required
+  boundary: required
+  current_stages: []
+  lifecycle_scope: required
+authority:
+  stage_transitions: required-human
+  releases: required-human
+  risk_acceptance: required-human
+  retirement: required-human
+model:
+  authoritative_location: required
+  representation: required
+  identifier_scheme: required
+artifacts:
+  decisions: required
+  risks: required
+  verification_evidence: required
+profiles:
+  product: []
+  assurance: []
+  language: []
+tailoring_record: required
+unresolved_questions: []

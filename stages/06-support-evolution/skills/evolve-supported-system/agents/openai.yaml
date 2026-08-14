@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evolve Supported System"
+  short_description: "Maintain and evolve a supported system"
+  default_prompt: "Use $evolve-supported-system to deliver a traced support or evolution change through a PR."
