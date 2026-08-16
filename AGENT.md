@@ -24,6 +24,10 @@ requires a human answer and no independent work remains. A pending review,
 failure, missing documentation, or difficult task is not by itself a reason to
 pause.
 
+When a body of work requires a series of related pull requests, publish them as
+a pull request stack with explicit dependencies, base branches, and merge order
+so the human can review and merge the series efficiently.
+
 Agents recommend tollgate outcomes. Only the human authority named by the
 project may approve a stage transition, risk acceptance, release, or retirement.
 
