@@ -26,7 +26,9 @@ pause.
 
 When a body of work requires a series of related pull requests, publish them as
 a pull request stack with explicit dependencies, base branches, and merge order
-so the human can review and merge the series efficiently.
+so the human can review and merge the series efficiently. Create and manage the
+stack with the `gh stack` extension. When using the GitHub CLI, ensure this
+extension is installed before starting the stacked pull request workflow.
 
 Agents recommend tollgate outcomes. Only the human authority named by the
 project may approve a stage transition, risk acceptance, release, or retirement.
