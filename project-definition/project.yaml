@@ -14,11 +14,16 @@ authority:
   risk_acceptance: required-human
   retirement: required-human
   methodology_proposals: required-human
+roles:
+  assignments: required
+  independence_requirements: required
+  role_skill_mapping: required
 model:
   authoritative_location: required
   representation: required
   identifier_scheme: required
 artifacts:
+  work_packages: required
   decisions: required
   risks: required
   verification_evidence: required

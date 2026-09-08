@@ -17,6 +17,11 @@ Stage-local instructions and skills live in [`stages/`](stages/README.md).
 Language and product profiles may add realization rules, but cannot redefine the
 core, stage authority, or lifecycle.
 
+A pull request is one work package. Its commits complete ordered, role-scoped
+process outcomes while leaving the repository consistent. Agents load only the
+context and skills applicable to their assigned role and outcome; tollgates and
+human authorities remain separate from repository merge mechanics.
+
 ## Lifecycle
 
 1. Exploration

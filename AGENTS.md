@@ -9,7 +9,8 @@ the core.
 1. Read `core/README.md` and the core documents it requires.
 2. In an adopting project, read its project-definition manifest and tailoring record.
 3. Identify the current lifecycle stage, role, and scope.
-4. Read only that stage's `README.md`, tollgate, and applicable skill.
+4. Read the role and work-package rules, then only that stage's `README.md`,
+   tollgate, role-entry skill, and applicable process or artifact skills.
 5. Read selected starter items and profiles only when applicable.
 
 Precedence is: core, completed project definition, approved tailoring, selected
@@ -23,6 +24,11 @@ with useful authorized work, including the next PR, unless a material question
 requires a human answer and no independent work remains. A pending review,
 failure, missing documentation, or difficult task is not by itself a reason to
 pause.
+
+Treat a pull request as one work package and each commit as one completed
+role-scoped work-package stage. A work-package stage is a process outcome, not a
+lifecycle stage; a merge is not approval. Operate in one role per process
+outcome and load only its bounded context and applicable skills.
 
 When a body of work requires a series of related pull requests, publish them as
 a pull request stack with explicit dependencies, base branches, and merge order

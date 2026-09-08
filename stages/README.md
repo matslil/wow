@@ -4,6 +4,11 @@ Load only the active stage and applicable skill after reading the core and the
 project definition. Each stage repeats the essential local workflow deliberately
 to limit agent context. Stage repetition may not change core semantics.
 
+Stage skills route lifecycle work; they do not grant one invocation every
+engineering role. For each process outcome, load the assigned role entry and
+only the process, artifact, assurance, starter, and profile material selected by
+the context rules in [`../core/roles-and-work-packages.md`](../core/roles-and-work-packages.md).
+
 | Stage | Skill |
 | --- | --- |
 | [Exploration](01-exploration/README.md) | `explore-system` |
