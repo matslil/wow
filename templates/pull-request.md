@@ -1,16 +1,31 @@
 ## Process context
 
+- Work package:
 - Stage:
-- Role:
-- Engineering outcome:
 - Model baseline:
 - Related needs, decisions, risks, and requirements:
+
+## Work-package contract
+
+- Authorized objective:
+- Affected model scope:
+- Completion criteria:
+- Reserved human decisions:
+- Explicit exclusions:
+
+### Planned process outcomes
+
+| Order | Process outcome | Role | Commit | Status |
+| --- | --- | --- | --- | --- |
 
 ## Changes
 
 ## Model and traceability impact
 
 ## Evidence
+
+- Context-package identities and baselines:
+- Process verdicts (`pass`, `fail`, `inconclusive`, `not-applicable`, or `pending-human`):
 
 ### Verification and validation coverage
 
@@ -24,6 +39,12 @@
 - Reviewed and consistent:
 - Not applicable:
 - Unresolved:
+
+### Independent review
+
+- Required independence:
+- Reviewer role and context:
+- Findings and disposition:
 
 ## Unresolved
 

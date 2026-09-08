@@ -7,15 +7,18 @@ customization: prohibited
 # Pull-Request Change Workflow
 
 All persistent repository changes use pull requests. A PR represents one
-coherent engineering outcome and identifies its stage, intent, model and
-traceability impact, evidence, uncertainty, decisions, and follow-on work.
+completed work package and identifies its stage, intent, baseline, model and
+traceability impact, roles, planned process outcomes, evidence, uncertainty,
+decisions, and follow-on work.
 
-Use a focused PR for a small independent outcome. Use a larger PR with multiple
-commits when its parts are required for one coherent outcome. Every commit must:
+Define a non-trivial work package before implementation as required by
+[`roles-and-work-packages.md`](roles-and-work-packages.md). Use a focused PR for
+a small independent outcome. Use a larger PR with multiple commits when several
+process outcomes are required to complete one work package. Every commit must:
 
 - leave source, model, documentation, and generated artifacts consistent;
 - pass checks applicable to that commit;
-- provide a meaningful, reviewable engineering increment;
+- complete a named, reviewable process outcome assigned to one role;
 - avoid relying on a later commit to repair deliberate breakage.
 
 A larger change requires a holistic consistency review before its PR is ready.
@@ -28,8 +31,13 @@ documentation, operations, support, and retirement. Record affected, unaffected,
 not-applicable, and unresolved areas in the PR.
 
 The normal loop is: select the next authorized outcome, create a branch,
-implement verified commits, open or update the PR, record evidence, then begin
-the next unblocked outcome. Waiting for review is not a reason to pause.
+define the work package, open or update its PR, execute role-scoped process
+outcomes as verified commits, perform the required independent review, record
+evidence, then begin the next unblocked outcome. Waiting for review is not a
+reason to pause.
+
+Merging updates the repository. It does not by itself approve a model baseline,
+lifecycle transition, release, retirement, or risk acceptance.
 
 Use [`../templates/pull-request.md`](../templates/pull-request.md). A PR may be
 stacked when dependencies are explicit and every commit remains valid.

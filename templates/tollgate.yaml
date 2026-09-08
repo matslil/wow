@@ -3,6 +3,8 @@ scope: required
 current_stage: required
 candidate_stage: required
 baseline: required
+assessor_role: required
+context_package: required
 maturity:
   criterion: absent
 blocking_findings: []
