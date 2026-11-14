@@ -1,8 +1,3 @@
-starter_dispositions:
-  - starter_item: required
-    disposition: accepted
-    rationale: required-when-not-accepted
-    risk: required-when-not-accepted
-    compensating_evidence: []
-    reassessment_trigger: optional
-    approved_by: required-when-approval-is-needed
+status: provisional
+selected_guidance: [] # path, version, scope
+exceptions: [] # rule, reason, risk, compensating evidence, revisit trigger, human acceptance

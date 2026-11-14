@@ -1,55 +1,29 @@
-## Process context
+## Outcome
 
-- Work package:
-- Stage:
-- Model baseline:
-- Related needs, decisions, risks, and requirements:
+Requested item, resulting behavior/content, and scope. Link the baseline and
+acceptance criteria; include dependencies/base/merge order only for a stack.
 
-## Work-package contract
+## Changes requiring attention
 
-- Authorized objective:
-- Affected model scope:
-- Completion criteria:
-- Reserved human decisions:
-- Explicit exclusions:
-
-### Planned process outcomes
-
-| Order | Process outcome | Role | Commit | Status |
-| --- | --- | --- | --- | --- |
-
-## Changes
-
-## Model and traceability impact
+- Knowledge added/changed/removed and its effect (or none):
+- Skill/process changes needing human acceptance (or none):
+- Goal or other reserved decisions (or none):
 
 ## Evidence
 
-- Context-package identities and baselines:
-- Process verdicts (`pass`, `fail`, `inconclusive`, `not-applicable`, or `pending-human`):
+- Verification/validation methods, baseline, results, and limitations:
+- Coverage beyond existing checks; failing-check assumptions, if applicable:
+- Holistic consistency and applicable independent review:
+- AI-USAGE update:
+- Temporary-artifact cleanup and retained evidence:
+- Every completed commit pushed:
 
-### Verification and validation coverage
+## Human review
 
-- Requirement verification methods and cases:
-- Other artifact and implementation assurance:
-- Validation against needs and intended use:
+Record acceptance of changed skills against a specific revision. Merge alone does
+not establish review or approve lifecycle transitions, risk, release, or retirement.
 
-### Holistic consistency review
+## Remaining work
 
-- Affected engineering chain:
-- Reviewed and consistent:
-- Not applicable:
-- Unresolved:
-
-### Independent review
-
-- Required independence:
-- Reviewer role and context:
-- Findings and disposition:
-
-## Unresolved
-
-## Decisions requiring human authority
-
-## Tollgate impact
-
-## Follow-on PRs
+Only unresolved issues or authorized follow-ons. Omit empty sections. Engineering
+may link role outcomes, model traces, and tollgate impact; other work need not.

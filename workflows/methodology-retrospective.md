@@ -1,37 +1,20 @@
----
-id: WOW-WORKFLOW-RETROSPECTIVE
-classification: core
-customization: prohibited
----
-
 # Methodology Retrospective
 
-Run a retrospective at each stage tollgate and after a larger delivery, serious
-incident, retirement, or repeated process problem. A retrospective evaluates the
-methodology, not individual performance, and must not pause otherwise useful
-authorized work.
+Use after substantial delivery, repeated friction, incidents, or an applicable
+engineering tollgate. Assess the method, not individuals; keep depth proportional.
 
-1. Identify the project baseline, methodology version, lifecycle stage, scope,
-   and trigger.
-2. Compare expected and observed outcomes using PRs, decisions, model history,
-   defects, rework, delays, verification results, incidents, and human feedback.
-3. Record what helped, what failed, unnecessary work, missing guidance, context
-   load, automation opportunities, and unintended incentives.
-4. Find the cause and classify it as project definition, local execution,
-   selected profile, starter content, or immutable core.
-5. Implement project-local corrections through normal PRs. A local rule may be
-   stricter than the core but may not weaken or override it.
-6. For a generalizable methodology issue, prepare
-   [`../templates/methodology-proposal.md`](../templates/methodology-proposal.md).
-   Include evidence, affected projects or contexts, proposed wording, tradeoffs,
-   compatibility, migration, and validation.
-7. Obtain the project's designated human approval before submitting the proposal
-   to its `methodology_feedback_repository` as an issue or PR.
-8. Keep the proposal status `proposed` until accepted upstream. Do not present it
-   as core or alter the recorded methodology version prematurely.
-9. Trace the upstream decision back to the retrospective. If accepted, adopt the
-   released methodology through a separate project PR.
+1. Identify baseline, scope, trigger, and expected outcome.
+2. Compare evidence of quality, rework, context load, navigation, delays, and
+   human feedback. Separate observation from inference.
+3. Identify what helped, hindered, was missing, or added unnecessary complexity.
+4. Classify changes as implementation, knowledge, or skills/process; apply every
+   relevant control when categories overlap.
+5. Fix authorized implementation, summarize knowledge changes, and propose every
+   skill change for human review and acceptance. Do not adopt pending proposals.
+6. For generalizable feedback, prepare [a proposal](../templates/methodology-proposal.md).
+   Submit it upstream only with explicit human authorization; do not infer permission
+   to contact maintainers from a local task. Record acceptance before adoption.
+7. Keep durable evidence and remove temporary working material at its cleanup trigger.
 
-Upstream maintainers assess whether a proposal is general, preserves core
-invariants, remains concise, and has adequate evidence. They may accept, revise,
-defer, redirect to starter/profile content, or reject it with rationale.
+Use [the retrospective template](../templates/retrospective.md) when useful.
+Continue other authorized work while decisions are pending.
