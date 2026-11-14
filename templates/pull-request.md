@@ -14,7 +14,8 @@ acceptance criteria; include dependencies/base/merge order only for a stack.
 - Verification/validation methods, baseline, results, and limitations:
 - Coverage beyond existing checks; failing-check assumptions, if applicable:
 - Holistic consistency and applicable independent review:
-- AI-USAGE update:
+- AI-USAGE compliance: promise revision, checked scope, contribution evidence,
+  verdict, and any promise change requiring explicit human acceptance:
 - Temporary-artifact cleanup and retained evidence:
 - Every completed commit pushed:
 

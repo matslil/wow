@@ -57,10 +57,25 @@ retain necessary decisions and evidence separately.
 Do not commit binaries without explicit human request or acknowledgement.
 Generated images, archives, executables, and binary test fixtures are included.
 
-## AI provenance
+## AI usage promise
 
-Maintain root `AI-USAGE.md`. Use [the template](../templates/AI-USAGE.md) to identify
-paths/revisions, human-only content, human/AI collaboration (including validation
-only or grammar/spelling help), and AI-generated content. Record unknown history
-honestly. Human review alone does not make AI-generated text human-authored.
-Update provenance with each change.
+Root `AI-USAGE.md` states the project's promise about authorship and AI involvement,
+not a history of how content was produced. Use [the template](../templates/AI-USAGE.md)
+to define scope, required authorship, and permitted assistance before producing
+versioned output. Distinguish human-authored, collaborative, and AI-generated
+content, including validation-only or grammar/spelling assistance where permitted.
+Permission to use AI is not a promise that AI will author the content.
+
+Before each commit, verify all added or changed output against the applicable
+promise, including copied or moved content. Check both directions: AI-generated
+content cannot satisfy a human-authored promise, and human-authored content cannot
+satisfy an AI-generated promise. Human review alone does not change authorship.
+Use contribution evidence and human confirmation where needed, not stylistic
+guesses or an AI detector. Record evidence and verdicts in the PR or verification
+record, separately from the promise.
+
+A mismatch fails verification. Missing, ambiguous, or unsupported authorship is
+inconclusive; resolve it before committing affected output. Correct the output or
+seek an explicit human decision on the promise. Never silently relabel content or
+rewrite the promise to make a check pass. Promise changes require human acceptance;
+ordinary output changes verify against the existing promise without rewriting it.

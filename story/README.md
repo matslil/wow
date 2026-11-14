@@ -14,11 +14,12 @@ unless a deliberate exception better serves the work; no guideline is a hard
 requirement or automatic rejection criterion. Distinguish human constraints from
 editorial preferences. A checklist cannot establish artistic quality.
 
-Maintain root `AI-USAGE.md` with the provenance of individual chapters/sections
-where needed: human-only, human/AI collaboration and its exact form, or AI-generated.
-Validation-only and grammar/spelling assistance must remain distinguishable from
-AI drafting. Unknown prior authorship stays unknown. Use the
-[shared template](../templates/AI-USAGE.md).
+Define root `AI-USAGE.md` as a promise of authorship and permitted AI assistance
+for the work, down to chapters/sections where needed. Distinguish human authorship,
+collaboration, and AI generation, including validation-only or grammar/spelling
+limits. Verify versioned output against that promise before commit in both
+directions; unresolved authorship cannot pass. Keep contribution evidence in PRs
+or verification records. Use the [shared template](../templates/AI-USAGE.md).
 
 For interactive stories, verify state and paths and validate meaningful choices.
 For tabletop work, playtest rules and adventure usability with participants when

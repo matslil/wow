@@ -9,9 +9,10 @@
 3. Replace root README with a short project purpose and navigation. Establish root
    context, a completed project definition, and human authorities. Use existing
    artifacts when adopting rather than creating duplicate knowledge.
-4. Create root `AI-USAGE.md` from [this template](AI-USAGE.md). Do not copy WoW's
-   authorship claims as claims about your project. Preserve provenance for reused
-   methodology separately from new deliverables.
+4. Establish a human-accepted root `AI-USAGE.md` promise using
+   [this template](AI-USAGE.md) before producing versioned output. Define required
+   authorship and permitted assistance for each scope, including reused material.
+   Verify changes against it; do not inherit WoW's promise as your project's choice.
 5. Keep general knowledge/skills at root and scoped equivalents with their owning
    system or narrative module. Decide shared versus separate work-type trees from
    actual dependencies. Do not force a directory per work type.

@@ -29,5 +29,6 @@ not functions. Link needs, architecture, interfaces, implementation, and evidenc
 
 Human prompts enter through [handle-request](../skills/handle-request/SKILL.md).
 Bug reports use [fix-bug](skills/fix-bug/SKILL.md). Both follow one PR per requested
-item and update root `AI-USAGE.md`. Use [requirement](templates/requirement.md) and
+item and verify output against root `AI-USAGE.md`. Use
+[requirement](templates/requirement.md) and
 [tollgate](templates/tollgate.yaml) templates only when applicable.

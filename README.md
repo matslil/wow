@@ -26,7 +26,7 @@ changes to the knowledge behind the result.
 | [story/](story/README.md) | Story creation, editorial validation, and craft guidance |
 | [project-definition/](project-definition/README.md) | Project-specific scope, authority, and tailoring |
 | [templates/](templates/README.md) | Reusable starting artifacts |
-| [AI-USAGE.md](AI-USAGE.md) | Provenance of this repository's content |
+| [AI-USAGE.md](AI-USAGE.md) | Authorship and AI-assistance promise |
 
 Keep knowledge and skills near their narrowest applicable scope. Adopting projects
 replace this README with their own short purpose and navigation; they do not

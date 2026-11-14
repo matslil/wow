@@ -12,8 +12,10 @@
 5. Plan requested adoption items using the shared workflow: one PR per item,
    verified commits pushed individually, PR opened when that item's plan is done.
    Propose a breakdown for large migrations; do not silently multiply requested PRs.
-6. Summarize knowledge changes, propose skill changes for human acceptance, document
-   AI use without guessing history, and validate representative existing tasks.
+6. Establish the human-accepted AI-usage promise and its effective scope; verify
+   versioned changes against it without guessing historical authorship. Keep
+   contribution evidence separately. Summarize knowledge changes, propose skill
+   changes for human acceptance, and validate representative existing tasks.
 
 Engineering projects additionally map lifecycle/model evidence and human tollgates.
 Stories map canon, intended reader experience, editorial checks, and provenance.
