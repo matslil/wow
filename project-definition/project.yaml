@@ -1,35 +1,47 @@
+status: provisional
 methodology_version: required
-methodology_feedback_repository: required
+methodology_feedback_repository: optional
 project:
   name: required
-  owner: required
-  system_of_interest: required
+  owner: required-human
   purpose: required
   boundary: required
-  current_stages: []
-  lifecycle_scope: required
+  work_types: [] # engineering, story, or other declared types
+  module_layout: required # shared system tree or work-type trees, with rationale
+  context_location: required # root context.md or root knowledge/context.md
+  license: required
 authority:
-  stage_transitions: required-human
+  goal_changes: required-human
+  skill_acceptance: required-human
   releases: required-human
   risk_acceptance: required-human
   retirement: required-human
   methodology_proposals: required-human
-roles:
-  assignments: required
-  independence_requirements: required
-  role_skill_mapping: required
-model:
-  authoritative_location: required
-  representation: required
-  identifier_scheme: required
 artifacts:
+  implementation: required
+  knowledge: knowledge/
+  skills: skills/
   work_packages: required
   decisions: required
-  risks: required
   verification_evidence: required
+  ai_usage: AI-USAGE.md
+engineering: # mark not-applicable when absent
+  system_of_interest: required-if-selected
+  current_stages: []
+  lifecycle_scope: required-if-selected
+  stage_transition_authority: required-human-if-selected
+  roles_and_skill_mapping: required-if-selected
+  independence_requirements: required-if-selected
+  authoritative_model: required-if-selected
+  model_representation: required-if-selected
+  identifier_scheme: required-if-selected
+story: # mark not-applicable when absent
+  audience_and_intended_experience: required-if-selected
+  canon_location: required-if-selected
+  editorial_and_playtest_methods: required-if-selected
 profiles:
   product: []
   assurance: []
   language: []
-tailoring_record: required
+tailoring_record: project-definition/tailoring.yaml
 unresolved_questions: []

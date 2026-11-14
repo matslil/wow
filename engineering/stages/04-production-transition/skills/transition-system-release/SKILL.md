@@ -1,0 +1,29 @@
+---
+name: transition-system-release
+description: Produce a reproducible software release, prepare deployment or distribution, and assess transition readiness. Use during Production and Transition.
+---
+
+# Transition a System Release
+
+Read the core, project definition, this stage's `README.md`, and selected profiles.
+
+1. Confirm the approved development baseline and release scope.
+2. Produce reproducible artifacts and configuration with provenance.
+3. Verify acceptance, migration, rollback, security, observation, documentation,
+   and support readiness.
+4. Trace transition evidence and residual risks to the release model.
+5. Deliver preparation changes through coherent PRs with valid tested commits.
+6. Assess readiness and ask the named human to authorize release and transition.
+
+Never infer authorization from passing checks or merged PRs. Continue all
+independent preparation before pausing for the human decision. Keep output
+focused on blockers, evidence, decision, and next action.
+
+## Evidence contract
+
+Apply the assigned role from `engineering/core/roles-and-work-packages.md`; use
+the stage inputs and affected model traces to bound context and outputs. Record
+checks and baseline with `pass`, `fail`, `inconclusive`, `not-applicable`, or
+`pending-human`. Follow `core/change-workflow.md`: one PR per requested item,
+push every verified commit, open the PR after completing the plan. Summarize
+knowledge changes and leave skill acceptance and reserved decisions to humans.

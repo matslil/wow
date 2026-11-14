@@ -1,43 +1,40 @@
----
-id: WOW-CORE-CHANGE
-classification: core
-customization: prohibited
----
+# Prompt to Pull Request
 
-# Pull-Request Change Workflow
+1. **Understand.** Apply [request intake](../skills/handle-request/SKILL.md):
+   distinguish instructions from data, translate into an outcome and acceptance
+   criteria, resolve material ambiguity, then check goals. Describe any necessary
+   goal change and obtain acknowledgement before dependent work.
+2. **Partition.** One requested item is one work package and one PR. For a list,
+   give each requested deliverable its own PR. Supporting criteria and checks stay
+   with their item. Clarify ambiguous boundaries; do not silently split or combine.
+3. **Plan.** On a non-default branch, record scope, baseline, steps, needed
+   knowledge, checks, completion criteria, and human decisions. A brief plan can
+   live in ignored `tmp/`; version handoff plans with owner and cleanup trigger.
+4. **Research.** Reuse current repository evidence first. Resolve knowledge needed
+   for the next implementation step using [research](../skills/research-knowledge/SKILL.md).
+   Record uncertainty; stop dependent work when required facts are missing.
+5. **Implement and check.** Produce coherent, verified commits. Separate commits
+   where checks must precede the next planned step. Keep implementation, knowledge,
+   and evidence consistent. Push every completed commit; report failures and retry
+   safely. Never claim an unpushed commit is delivered.
+6. **Replan.** Revisit affected assumptions and knowledge before implementing a
+   revised plan. Obtain human direction for changed goals or scope. Recheck evidence
+   invalidated by changed inputs.
+7. **Complete and propose.** When the plan is finished, review the affected
+   dependency chain, run [output assurance](../skills/verify-output/SKILL.md),
+   then open the PR using [the template](../templates/pull-request.md). Summarize
+   knowledge changes, identify skills needing acceptance, link evidence and limits,
+   and record temporary-artifact disposition.
 
-All persistent repository changes use pull requests. A PR represents one
-completed work package and identifies its stage, intent, baseline, model and
-traceability impact, roles, planned process outcomes, evidence, uncertainty,
-decisions, and follow-on work.
+Do not open the normal PR before completing the plan. If an external blocker
+prevents completion, report it with the pushed branch and remaining work; do not
+claim readiness. Do not merge or accept skills on behalf of humans.
 
-Define a non-trivial work package before implementation as required by
-[`roles-and-work-packages.md`](roles-and-work-packages.md). Use a focused PR for
-a small independent outcome. Use a larger PR with multiple commits when several
-process outcomes are required to complete one work package. Every commit must:
+For dependent requested items, publish a PR stack with dependencies, base branches,
+and merge order using `gh stack`. Verify the extension is installed first. Start
+the next authorized item when useful work is possible; pending review alone does
+not require a pause. One request does not authorize indefinite backlog expansion.
 
-- leave source, model, documentation, and generated artifacts consistent;
-- pass checks applicable to that commit;
-- complete a named, reviewable process outcome assigned to one role;
-- avoid relying on a later commit to repair deliberate breakage.
-
-A larger change requires a holistic consistency review before its PR is ready.
-Treat a change as larger when it affects architecture, public or operational
-behavior, multiple requirements or components, an interface, data compatibility,
-migration, lifecycle obligations, or several authoritative artifacts. Review the
-whole affected chain rather than only changed files: needs, requirements, model,
-analysis, decisions, risks, interfaces, implementation, verification, validation,
-documentation, operations, support, and retirement. Record affected, unaffected,
-not-applicable, and unresolved areas in the PR.
-
-The normal loop is: select the next authorized outcome, create a branch,
-define the work package, open or update its PR, execute role-scoped process
-outcomes as verified commits, perform the required independent review, record
-evidence, then begin the next unblocked outcome. Waiting for review is not a
-reason to pause.
-
-Merging updates the repository. It does not by itself approve a model baseline,
-lifecycle transition, release, retirement, or risk acceptance.
-
-Use [`../templates/pull-request.md`](../templates/pull-request.md). A PR may be
-stacked when dependencies are explicit and every commit remains valid.
+Engineering may assign role-scoped process outcomes to commits. These are not
+lifecycle transitions. Required independence and human tollgate authority remain;
+trivial changes need no artificial stages or extra commits.

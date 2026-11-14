@@ -1,7 +1,7 @@
 ---
 id: WOW-CORE-COMMUNICATION
 classification: core
-customization: prohibited
+customization: human-reviewed
 ---
 
 # Agent Communication

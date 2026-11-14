@@ -1,27 +1,16 @@
----
-id: WOW-CORE
-classification: core
-customization: prohibited
----
+# Shared Core
 
-# Immutable Core
+These rules apply both to projects using this template and to maintaining WoW.
+They are accepted project policy, amendable through human-reviewed changes;
+they do not outrank human prompts or platform instructions.
 
-These rules define methodology conformance and cannot be tailored:
+Read these small shared documents:
 
-- the human authority defined by the project controls lifecycle transitions;
-- every persistent repository change is delivered through a pull request;
-- every pull request completes one work package and every commit completes one
-  coherent, tested work-package stage within it;
-- intent, model elements, implementation, and evidence remain traceable;
-- agents distinguish explicit facts, evidence, inference, unknowns, and conflicts;
-- agents continue useful authorized work and pause only for a required human answer;
-- all AI interaction is crisp, structured, condensed, and ordered by importance;
-- each project completes its own mandatory project definition;
-- starter content may not override the core.
+- [Authority and content](authority.md): prompts, skills, implementation, knowledge.
+- [Change workflow](change-workflow.md): one item, one plan, one PR.
+- [Output](output.md): modularity, assurance, temporary files, and provenance.
+- [Communication](agent-communication.md): concise human-facing results.
 
-Read [`lifecycle.md`](lifecycle.md), [`change-workflow.md`](change-workflow.md),
-[`roles-and-work-packages.md`](roles-and-work-packages.md),
-[`authority-and-tollgates.md`](authority-and-tollgates.md),
-[`model-and-evidence.md`](model-and-evidence.md),
-[`assurance.md`](assurance.md), and
-[`agent-communication.md`](agent-communication.md).
+Domain rules are scoped: [engineering](../engineering/README.md) retains the
+systems lifecycle, roles, traceability, and tollgates; [story](../story/README.md)
+provides editorial workflows. Neither is required for unrelated work.
