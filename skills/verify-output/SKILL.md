@@ -25,6 +25,16 @@ scoped knowledge; report `pass`, `fail`, `inconclusive`, `not-applicable`, or
    propose the method in the applicable skill for human acceptance.
 2. Run checks appropriate to the changed baseline and affected dependencies.
    Preserve required reviewer independence. Self-review is not independent review.
+   Before committing versioned output, read root `AI-USAGE.md` and map every added
+   or changed item to its promise. Check origin, permitted assistance, and required
+   human contribution using contribution evidence, not AI detection or style.
+   Reject AI content in a human-authored scope and human content in an AI-generated
+   scope; check collaborative and limited-assistance promises just as explicitly.
+   A mismatch is `fail`; unclear scope or insufficient evidence is `inconclusive`.
+   Resolve either before committing affected output. Record the promise revision,
+   checked scope, evidence, and verdict separately in the PR/verification record.
+   Correct output or obtain an explicit human decision; never change the promise
+   merely to make output pass. Pending required human review stays `pending-human`.
 3. On failure, examine the check's oracle, environment, and assumptions. If they
    remain valid, fix the output. If changed intent invalidates them, trace the reason,
    obtain any required approval, update checks, and rerun affected evidence.

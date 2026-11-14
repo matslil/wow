@@ -63,3 +63,28 @@ of an actual product are not applicable.
 
 Skill/process acceptance: pending-human against the final PR revision. No merge,
 release, risk acceptance, or stage transition is authorized by these checks.
+
+## Follow-up: AI-usage promise
+
+The human correction after PR #9 supersedes the retrospective AI-USAGE behavior
+reviewed above. AI-USAGE now declares promised authorship and permitted assistance;
+PRs/verification records hold actual contribution evidence. Root WoW policy permits
+human, collaborative, or AI-generated work, preserving its human-directed workflow.
+
+Desk review of the revised core, template, and verification/story skills:
+
+| Case | Required result |
+| --- | --- |
+| AI-drafted prose in a human-authored scope | fail; correct output or seek a human decision on the promise |
+| Human-written prose in an AI-generated scope | fail; permission to use AI is insufficient evidence of AI authorship |
+| Human prose with explicitly allowed AI grammar corrections | pass when evidence confirms only the permitted assistance |
+| AI rewriting under a validation-only promise | fail; exceeds permitted assistance |
+| Unclear scope or unknown authorship | inconclusive; resolve before committing affected output |
+| Changing the promise to match a nonconforming draft | requires explicit human acceptance; no silent relabelling |
+
+Self-review found these outcomes covered. This change is AI-drafted from explicit
+human direction, permitted by WoW's proposed promise and the existing authorized
+workflow; skill/promise acceptance remains pending human PR review. The check uses
+known contribution history, not an automated authorship detector. No historical
+content was newly certified. Static checks and changed-skill validation are
+recorded in the follow-up PR; no new test harness is needed for this prose change.

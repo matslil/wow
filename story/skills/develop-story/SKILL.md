@@ -1,6 +1,6 @@
 ---
 name: develop-story
-description: Draft, revise, and validate narrative work against its intended audience, canon, and human constraints, with advisory craft guidance and explicit AI provenance.
+description: Draft, revise, and validate narrative work against its intended audience, canon, human constraints, and AI usage promise, with advisory craft guidance.
 ---
 
 # Develop a Story
@@ -9,11 +9,12 @@ Roles: writer/editor; stages: planning, drafting, revision, editorial validation
 Read the clarified request, root goals, relevant canon and neighboring passages,
 [guidelines](../../knowledge/guidelines.md), and only source records needed for
 uncertain guidance. Outputs: story implementation, scoped knowledge updates,
-editorial evidence, and root AI-USAGE updates within the requested work package.
+editorial and AI-usage compliance evidence within the requested work package.
 
 1. Establish audience, intended experience, form, scope, author constraints, and
-   permitted AI contribution. Ask about material gaps; do not silently change
-   human-only passages or turn validation-only work into rewriting.
+   permitted AI contribution from root `AI-USAGE.md`. Ask about material gaps;
+   do not silently change human-only passages or turn validation-only work into
+   rewriting.
 2. Plan the requested item. Check canon and research factual/setting gaps before
    drafting; store knowledge and license/applicability limits near the owner.
 3. Select useful craft defaults and deliberate exceptions. Draft or revise toward
@@ -30,9 +31,12 @@ editorial evidence, and root AI-USAGE updates within the requested work package.
 6. After a passing check, inspect what it could miss. After a failing check,
    distinguish a defect from a deliberate exception or invalid criterion.
    Add cases or redesign review methods when warranted; revise then recheck.
-7. Update AI-USAGE by content/revision: human-only, collaborative with exact help
-   (validation, spelling/grammar, suggestions, drafting), AI-generated, or unknown.
-   Never recategorize generated prose as human-only because a human reviewed it.
+7. Before commit, verify changed chapters/sections against the authorship and
+   assistance promised in AI-USAGE. Reject mismatches in either direction, including
+   assistance exceeding validation-only or grammar/spelling limits. Record actual
+   contribution evidence separately; unresolved authorship cannot pass. Human
+   review does not reclassify generated prose. Do not rewrite the promise to fit
+   the draft; changes to the promise require explicit human acceptance.
 8. Summarize knowledge changes, proposed skill improvements, evidence, exceptions,
    and limits. Clean expired temporary artifacts, push every verified commit,
    then open the PR when the item's plan is complete.

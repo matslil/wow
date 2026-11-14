@@ -8,7 +8,7 @@ Read these small shared documents:
 
 - [Authority and content](authority.md): prompts, skills, implementation, knowledge.
 - [Change workflow](change-workflow.md): one item, one plan, one PR.
-- [Output](output.md): modularity, assurance, temporary files, and provenance.
+- [Output](output.md): modularity, assurance, temporary files, and AI-usage promises.
 - [Communication](agent-communication.md): concise human-facing results.
 
 Domain rules are scoped: [engineering](../engineering/README.md) retains the

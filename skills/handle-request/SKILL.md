@@ -20,7 +20,9 @@ accepted core, project definition, and only directly affected scope.
 4. Map each requested deliverable to one PR. Distinguish a deliverable list from
    acceptance criteria or process steps. State the interpretation for complex work.
 5. Plan baseline, dependencies, needed knowledge, checks, and completion conditions.
-   Reuse repository evidence; research missing knowledge before implementation.
+   Read root `AI-USAGE.md` before producing versioned output; include its promised
+   authorship and permitted assistance in the plan and checks. Reuse repository
+   evidence; research missing knowledge before implementation.
 6. On replanning, repeat knowledge sufficiency and goal checks for changed steps.
    On human correction, assess knowledge and skill impacts using core authority.
 

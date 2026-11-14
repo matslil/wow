@@ -1,12 +1,16 @@
-# AI Usage
+# AI Usage Promise
 
-This record covers WoW itself, not projects adopting the template.
+This promise covers new and changed versioned output in WoW from adoption of this
+revision. Adopting projects establish their own promises using the template.
 
-| Scope | Origin | AI involvement | Human contribution/review | Evidence or uncertainty |
-| --- | --- | --- | --- | --- |
-| Repository before this update | Unknown in detail | Prior agent workflows exist; individual authorship has not been audited | Historical review not reassessed | Git history alone does not establish human-only authorship |
-| Reusable workflow update, 2026-11-14 | AI-generated changes based on human direction and existing material | Codex researched sources, reorganized and drafted documentation/skills, and ran checks | Human supplied goals and detailed requirements; acceptance of the resulting changes is pending PR review | See the update PR and maintenance knowledge |
+| Scope | Promised authorship | Permitted AI assistance | Required human contribution/review |
+| --- | --- | --- | --- |
+| All repository output | Human-authored, collaborative, or AI-generated content is permitted | Research, validation, grammar/spelling, suggestions, drafting, and coding | Humans direct the work and review and accept skill/process changes |
 
-Retained source material keeps its prior, uncertain provenance. External material
-is linked and summarized in original wording; it is not presented as human-authored
-WoW text. Human acceptance does not reclassify generated prose as human-only.
+For every change, verify that its authorship, AI involvement, and required review
+conform to this promise. Keep contribution evidence and verification results in
+the PR or verification record. Do not present AI-generated material as human-only,
+or human-authored material as AI-generated. Human review does not change origin.
+
+This prospective promise does not certify historical authorship. A narrower promise
+or a change to permitted assistance requires explicit human acceptance before use.

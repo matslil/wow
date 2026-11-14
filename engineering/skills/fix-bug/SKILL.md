@@ -30,7 +30,8 @@ corrections, and one PR per requested bug item.
    complexity, memory, runtime, security, interfaces, and compatibility using
    measurements or justified analysis proportional to the change. Record limits.
 6. Apply [output assurance](../../../skills/verify-output/SKILL.md), update knowledge,
-   documentation and AI provenance, and deliver verified commits and the PR.
+   and documentation, verify against the AI-usage promise, and deliver verified
+   commits and the PR.
 
 Use `pass`, `fail`, `inconclusive`, `not-applicable`, or `pending-human`. Return
 upstream for ambiguous expected behavior, changes to approved intent, or risk

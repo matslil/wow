@@ -15,7 +15,8 @@
    Record uncertainty; stop dependent work when required facts are missing.
 5. **Implement and check.** Produce coherent, verified commits. Separate commits
    where checks must precede the next planned step. Keep implementation, knowledge,
-   and evidence consistent. Push every completed commit; report failures and retry
+   and evidence consistent. Verify versioned output against `AI-USAGE.md` before
+   committing. Push every completed commit; report failures and retry
    safely. Never claim an unpushed commit is delivered.
 6. **Replan.** Revisit affected assumptions and knowledge before implementing a
    revised plan. Obtain human direction for changed goals or scope. Recheck evidence

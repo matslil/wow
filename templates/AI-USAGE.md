@@ -1,14 +1,24 @@
-# AI Usage
+# AI Usage Promise
 
-State scope and revision/date. Distinguish provenance of the deliverable from
-reused methodology. Update this record alongside changes; unknown history stays
-unknown rather than being labelled human-only.
+Define the promise before creating versioned output. Replace these placeholders
+with human-accepted choices; this template itself grants no permission. State the
+effective revision and whether a promise covers new changes or existing content.
 
-| Content/path and revision | Origin | AI involvement | Human contribution/review | Evidence or uncertainty |
-| --- | --- | --- | --- | --- |
-| <scope> | human-only / collaborative / AI-generated / unknown | none / validation-only / grammar-spelling / suggestions / drafting / coding | <specific contribution and status> | <record> |
+| Content scope (paths or sections) | Promised authorship | Permitted AI assistance | Required human contribution/review |
+| --- | --- | --- | --- |
+| <default for otherwise unlisted output> | <human-authored / collaborative / AI-generated / explicitly permitted alternatives> | <none / validation-only / grammar-spelling / suggestions / drafting / coding> | <required role or action> |
+| <narrower scope, if needed> | <promise> | <allowed assistance> | <requirement> |
 
-Human review of generated text does not change its origin. If human prose receives
-only AI validation or grammar corrections, say so explicitly. Record mixed passages
-at chapter/section level when file-level classification hides meaningful differences.
-Do not publish private prompts or personal data to prove provenance.
+Define unambiguous boundaries and precedence for narrower scopes. Separate reused
+material from new deliverables when their promises differ. Human-authored content
+requires human creation; any limited AI assistance must be explicit. Collaborative
+content requires the stated contributions from both. AI-generated content requires
+AI creation; permitted human review does not make it human-authored. If several
+origins are permitted, list them rather than implying one is required.
+
+Verify every added or changed versioned output against this promise before commit.
+Reject mismatches in either direction. Resolve missing scope or uncertain evidence
+before committing affected output. Keep actual contribution evidence and check
+results in PRs or verification records, not in this promise. Do not publish private
+prompts or personal data as evidence. Change the promise only with explicit human
+acceptance, never merely to accommodate nonconforming output.
